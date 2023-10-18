@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Staff extends User{
 
-    public void RunStaff(List<Doctor> doctors, Scanner scanner) {
+    public void runStaff(List<Doctor> doctors, Scanner scanner) {
 
         while (true){
             System.out.println("==================== Enter your choice ====================");
@@ -15,7 +15,7 @@ public class Staff extends User{
 
             switch (doctorUsername) {
                 case "1" -> {
-                    this.viewDoctors(doctors);
+                    this.viewAllDoctors(doctors);
                 }
                 case "2" -> {
                     System.out.println("Logged out");
@@ -29,7 +29,7 @@ public class Staff extends User{
 
     }
 
-    private void viewDoctors(List<Doctor> doctors){
+    private void viewAllDoctors(List<Doctor> doctors){
         System.out.println("Name       : Ward");
         for (Doctor doctor : doctors) {
             String username = doctor.getUsername();

@@ -46,7 +46,7 @@ public class SystemHandler {
                             .findFirst()
                             .orElse(null);
 
-                    staff.RunStaff(doctors,scanner);
+                    staff.runStaff(doctors,scanner);
                 }
                 case "patient" -> {
                     Patient patient = patients.stream()
@@ -54,10 +54,9 @@ public class SystemHandler {
                             .findFirst()
                             .orElse(null);
 
-                    patient.callPa();
+                    patient.runPatients(doctors,scanner);
                 }
             }
-
         }
     }
 

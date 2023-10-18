@@ -12,8 +12,8 @@
         "2023-10-19": "Another note for John Doe on October 19, 2023."
       },
       "medicines": {
-        "Aspirin": "1 tablet",
-        "Antibiotic": "2 capsules"
+        "Aspirin": "1 tablet per day",
+        "Antibiotic": "2 capsules twice a day"
       }
     }
   },
@@ -29,7 +29,7 @@
         "2023-10-18": "A note for Jane Smith on October 18, 2023."
       },
       "medicines": {
-        "Ibuprofen": "1 tablet"
+        "Ibuprofen": "1 tablet before meal"
       }
     }
   },
