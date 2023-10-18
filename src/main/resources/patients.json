@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "username": "John Doe",
+    "password": "4c2a904bafba06591225113ad17b5cec",
+    "role": "patient",
+    "age": 30,
+    "medications": {
+      "decease": "Head ache",
+      "notes": {
+        "2023-10-18": "This is a note for John Doe on October 18, 2023.",
+        "2023-10-19": "Another note for John Doe on October 19, 2023."
+      },
+      "medicines": {
+        "Aspirin": "1 tablet",
+        "Antibiotic": "2 capsules"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "username": "Jane Smith",
+    "role": "patient",
+    "password": "71768b5e2a0b3697eb3c0c6d4ebbbaf8",
+    "age": 28,
+    "medications": {
+      "decease": "Fever",
+      "notes": {
+        "2023-10-18": "A note for Jane Smith on October 18, 2023."
+      },
+      "medicines": {
+        "Ibuprofen": "1 tablet"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "username": "Alice Johnson",
+    "role": "patient",
+    "password": "3231eac427e7a9b0c523c94d8754dbd2",
+    "age": 35,
+    "medications": {
+      "decease": "cough",
+      "notes": {},
+      "medicines": {}
+    }
+  }
+]

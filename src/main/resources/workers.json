@@ -1,0 +1,44 @@
+[
+    {
+        "id": 4,
+        "username": "Smith",
+        "password": "6ff776400acab21780ab646de757ebba",
+        "role": "doctor",
+        "age": 40
+    },
+    {
+        "id": 5,
+        "username": "Silva",
+        "password": "593bfa141e57e67c1f1be324f0195e64",
+        "role": "doctor",
+        "age": 45
+    },
+    {
+        "id": 6,
+        "username": "Johnson",
+        "password": "3228635b89112e2c641f5e5cc44e19fe",
+        "role": "doctor",
+        "age": 50
+    },
+    {
+        "id": 7,
+        "username": "James",
+        "password": "d52e32f3a96a64786814ae9b5279fbe5",
+        "role": "staff",
+        "age": 25
+    },
+    {
+        "id": 8,
+        "username": "Sam",
+        "role": "staff",
+        "password": "ba0e0cde1bf72c28d435c89a66afc61a",
+        "age": 32
+    },
+    {
+        "id": 9,
+        "username": "Chris",
+        "role": "staff",
+        "password": "944facfeb153b4f01916a0f166fcc315",
+        "age": 38
+    }
+]
