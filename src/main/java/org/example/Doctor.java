@@ -4,9 +4,22 @@ import java.util.Scanner;
 
 public class Doctor extends User{
 
+    private String ward;
+
+    public String getWard() {
+        return ward;
+    }
+
+    public void setWard(String ward) {
+        this.ward = ward;
+    }
 
     public Doctor(Integer id, String username, String role) {
         super(id, username, role);
+    }
+
+    public void callDoc(){
+        System.out.println("Doctor called");
     }
 
     public void addMedication(Integer userId, Scanner scanner) {

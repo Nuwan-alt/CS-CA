@@ -12,7 +12,8 @@ public class Main {
 
         fileUtils.welcome();
 
-        List <User> workers = fileUtils.readWorkers();
+        List <Doctor> doctors = fileUtils.readDoctors();
+        List <Staff> staff = fileUtils.readStaff();
         List <Patient> patients = fileUtils.readPatients();
         while (true){
             System.out.println("Enter your username:");
@@ -20,8 +21,8 @@ public class Main {
             System.out.println("Enter your password:");
             String password = scanner.nextLine();
 
-            SystemHandler systemHandler = new SystemHandler(name, password, workers, patients);
-            systemHandler.runSystem();
+            SystemHandler systemHandler = new SystemHandler(name, password, doctors, patients, staff);
+            systemHandler.runSystem(scanner);
         }
 
 

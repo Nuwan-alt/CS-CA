@@ -1,35 +1,66 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.Scanner;
 
 public class SystemHandler {
     private Integer userId;
     private String role;
     private String userPassword;
     private String username;
-    private List<User> users;
+    private List<Doctor> doctors;
+    private List<Staff> staffs;
     private List<Patient> patients;
     private PasswordUtils passwordUtils;
-    List<User> userList;
+    List<User> userList = new ArrayList<>();
 
-    public SystemHandler(  String username,String userPassword, List<User> users, List<Patient> patients) {
+    public SystemHandler(  String username,String userPassword, List<Doctor> doctors, List<Patient> patients, List<Staff> staffs) {
         this.userPassword = userPassword;
         this.username = username.toLowerCase().trim();
-        this.users = users;
+        this.doctors = doctors;
         this.patients = patients;
-         this.userList = Stream.concat(users.stream(), patients.stream())
-                .toList();
+        this.staffs = staffs;
+
+        userList.addAll(doctors);
+        userList.addAll(patients);
+        userList.addAll(staffs);
         this.passwordUtils = new PasswordUtils();
     }
-    public void runSystem(){
+    public void runSystem(Scanner scanner){
         boolean isLogged = this.login();
         if(isLogged) {
-            System.out.println("logged");
+            switch (role.toLowerCase()) {
+                case "doctor" -> {
+                    Doctor doctor = (Doctor) doctors.stream()
+                            .filter(user -> user.getId().equals(userId))
+                            .findFirst()
+                            .orElse(null);
+
+                    doctor.callDoc();
+
+                }
+                case "staff" -> {
+                    Staff staff = (Staff) staffs.stream()
+                            .filter(user -> user.getId().equals(userId))
+                            .findFirst()
+                            .orElse(null);
+
+                    staff.RunStaff(doctors,scanner);
+                }
+                case "patient" -> {
+                    Patient patient = patients.stream()
+                            .filter(user -> user.getId().equals(userId))
+                            .findFirst()
+                            .orElse(null);
+
+                    patient.callPa();
+                }
+            }
+
         }
     }
+
     private boolean login(){
         boolean isLogged = false;
         for (User user : userList) {

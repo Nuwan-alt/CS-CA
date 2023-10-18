@@ -11,30 +11,44 @@ import java.util.List;
 
 public class FileUtils {
     Gson gson = new Gson();
-    private List<User> workers = null;
+    private List<Staff> staff = null;
     private List<Patient> patients = null;
+    private List<Doctor> doctors = null;
 
-    public List<User> readWorkers(){
+    public List<Staff> readStaff(){
         try {
-            FileReader reader1 = new FileReader("src/main/resources/workers.json");
+            FileReader reader1 = new FileReader("src/main/resources/staff.json");
 
-            Type userListType1 = new TypeToken<List<User>>(){}.getType();
+            Type userListType1 = new TypeToken<List<Staff>>(){}.getType();
 
-            workers = gson.fromJson(reader1, userListType1);
+            staff = gson.fromJson(reader1, userListType1);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return workers;
+        return staff;
+    }
+
+    public List<Doctor> readDoctors(){
+        try {
+            FileReader reader2 = new FileReader("src/main/resources/doctors.json");
+            Type userListType2 = new TypeToken<List<Doctor>>(){}.getType();
+
+            doctors = gson.fromJson(reader2, userListType2);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return doctors;
     }
 
     public List<Patient> readPatients(){
         try {
-            FileReader reader1 = new FileReader("src/main/resources/patients.json");
+            FileReader reader3 = new FileReader("src/main/resources/patients.json");
 
-            Type userListType1 = new TypeToken<List<Patient>>(){}.getType();
+            Type userListType3 = new TypeToken<List<Patient>>(){}.getType();
 
-            patients = gson.fromJson(reader1, userListType1);
+            patients = gson.fromJson(reader3, userListType3);
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 4,
+    "username": "Smith",
+    "password": "6ff776400acab21780ab646de757ebba",
+    "role": "doctor",
+    "ward": "1A",
+    "age": 40
+  },
+  {
+    "id": 5,
+    "username": "Silva",
+    "password": "593bfa141e57e67c1f1be324f0195e64",
+    "role": "doctor",
+    "ward": "3B",
+    "age": 45
+  },
+  {
+    "id": 6,
+    "username": "Johnson",
+    "password": "3228635b89112e2c641f5e5cc44e19fe",
+    "role": "doctor",
+    "ward": "2A",
+    "age": 50
+  }
+]

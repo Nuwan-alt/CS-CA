@@ -19,4 +19,8 @@ public class Patient extends User {
         return this.medications;
     }
 
+    public void callPa(){
+        System.out.println("Patient called");
+    }
+
 }
