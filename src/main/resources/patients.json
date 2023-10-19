@@ -2,17 +2,17 @@
   {
     "medications": {
       "decease": "Head ache",
-      "medicines": {
+      "drug_prescriptions": {
         "Aspirin": "1 tablet per day",
         "Antibiotic": "2 capsules twice a day",
-        "wwe": "io",
-        "lok": "lp"
+        "Vitamin C": "2 pills before meal"
       },
-      "notes": {
-        "2023-10-19": "bhu",
+      "lab_tests": {
+        "2023-10-19": "Bad health condition",
         "2023-10-18": "This is a note for John Doe on October 18, 2023."
       }
     },
+    "passwordUtils": {},
     "id": 1,
     "username": "John Doe",
     "password": "4c2a904bafba06591225113ad17b5cec",
@@ -22,13 +22,14 @@
   {
     "medications": {
       "decease": "Fever",
-      "medicines": {
+      "drug_prescriptions": {
         "Ibuprofen": "1 tablet before meal"
       },
-      "notes": {
+      "lab_tests": {
         "2023-10-18": "A note for Jane Smith on October 18, 2023."
       }
     },
+    "passwordUtils": {},
     "id": 2,
     "username": "Jane Smith",
     "password": "71768b5e2a0b3697eb3c0c6d4ebbbaf8",
@@ -38,9 +39,10 @@
   {
     "medications": {
       "decease": "cough",
-      "medicines": {},
-      "notes": {}
+      "drug_prescriptions": {},
+      "lab_tests": {}
     },
+    "passwordUtils": {},
     "id": 3,
     "username": "Alice Johnson",
     "password": "3231eac427e7a9b0c523c94d8754dbd2",

@@ -20,12 +20,10 @@ public class User{
     public User() {
     }
     void viewAllDoctors(List<Doctor> doctors){
-        String formattedOutput1 = String.format("%-20s : %s", "Doctor Name", "Ward");
-        System.out.println(formattedOutput1);
+        String formattedLine1 = String.format("%-10s %-15s: %s", "ID", "Doctor Name", "Ward");
+        System.out.println(formattedLine1);
         for (Doctor doctor : doctors) {
-            String username = doctor.getUsername();
-            String ward = doctor.getWard();
-            String formattedOutput = String.format("%-20s : %s", username, ward);
+            String formattedOutput = String.format("%-10s %-15s: %s",doctor.getId(), doctor.getUsername(), doctor.getWard());
             System.out.println(formattedOutput);
         }
     }

@@ -39,6 +39,31 @@ public class FileUtils {
         return admin;
     }
 
+    public void updateAdmin(Admin updatedAdmin) {
+
+        // Step 1: Read the existing admin information
+        Admin existingAdmin = readAdmin();
+
+        if (existingAdmin == null) {
+            System.out.println("Admin not found for updating.");
+            return;
+        }
+
+        // Step 2: Update the admin's information
+        existingAdmin.setUsername(updatedAdmin.getUsername());
+        existingAdmin.setAge(updatedAdmin.getAge());
+        // You can update other fields as needed
+
+        // Step 3: Write the updated admin information back to the JSON file
+        try (Writer writer = new FileWriter("src/main/resources/admin.json")) {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create(); // Create a Gson instance with pretty printing
+            gson.toJson(existingAdmin, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error while updating the admin information in the JSON file.");
+        }
+    }
+
     public List<Doctor> readDoctors(){
         try {
             FileReader reader2 = new FileReader("src/main/resources/doctors.json");
@@ -64,7 +89,6 @@ public class FileUtils {
 
     public void patientUpdate(Patient updatedPatient, List<Patient> patients) {
 
-        // Step 2: Locate the patient to update
         int index = -1;
         for (int i = 0; i < patients.size(); i++) {
             if (patients.get(i).getId().equals(updatedPatient.getId())) {
@@ -73,23 +97,72 @@ public class FileUtils {
             }
         }
 
-        // Step 3: Update the patient's information
         if (index != -1) {
             patients.set(index, updatedPatient);
-            System.out.println("Patient updated successfully.");
         } else {
             System.out.println("Patient not found for updating.");
             return;
         }
 
-        // Step 4: Write the updated list of patients back to the JSON file
         try (Writer writer = new FileWriter("src/main/resources/patients.json")) {
-            Gson gson = new GsonBuilder().setPrettyPrinting().create(); // Create a Gson instance with pretty printing
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
             gson.toJson(patients, writer);
-            System.out.println("Patients list updated in the JSON file with pretty printing.");
+
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Error while updating the patients list in the JSON file.");
+        }
+    }
+
+    public void doctorUpdate(Doctor updatedDoctor, List<Doctor> doctors) {
+
+        int index = -1;
+        for (int i = 0; i < doctors.size(); i++) {
+            if (doctors.get(i).getId().equals(updatedDoctor.getId())) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index != -1) {
+            doctors.set(index, updatedDoctor);
+        } else {
+            System.out.println("Doctor not found for updating.");
+            return;
+        }
+
+        try (Writer writer = new FileWriter("src/main/resources/doctors.json")) {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            gson.toJson(doctors, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error while updating the doctors list in the JSON file.");
+        }
+    }
+
+    public void staffUpdate(Staff updatedStaff, List<Staff> staffMembers) {
+
+        int index = -1;
+        for (int i = 0; i < staffMembers.size(); i++) {
+            if (staffMembers.get(i).getId().equals(updatedStaff.getId())) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index != -1) {
+            staffMembers.set(index, updatedStaff);
+        } else {
+            System.out.println("Staff member not found for updating.");
+            return;
+        }
+
+        try (Writer writer = new FileWriter("src/main/resources/staff.json")) {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            gson.toJson(staffMembers, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error while updating the staff members list in the JSON file.");
         }
     }
 

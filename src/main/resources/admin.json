@@ -1,8 +1,8 @@
-
-  {
-    "id": 4,
-    "username": "Mark",
-    "password": "b82a9a13f4651e9abcbde90cd24ce2cb",
-    "role": "admin",
-    "age": 43
-  }
+{
+  "passwordUtils": {},
+  "id": 4,
+  "username": "Mark",
+  "password": "b82a9a13f4651e9abcbde90cd24ce2cb",
+  "role": "admin",
+  "age": 43
+}

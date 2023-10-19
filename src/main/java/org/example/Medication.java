@@ -1,18 +1,17 @@
 package org.example;
 
-import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 
 public class Medication {
     private String decease;
-    private HashMap<String,String> medicines;
-    private HashMap<String,String> notes;
+    private HashMap<String,String> drug_prescriptions;
+    private HashMap<String,String> lab_tests;
+    
 
     public Medication(String decease) {
         this.decease = decease;
-        this.medicines = new HashMap<>();
-        this.notes = new HashMap<>();
+        this.drug_prescriptions = new HashMap<>();
+        this.lab_tests = new HashMap<>();
     }
 
     public String getDecease() {
@@ -24,19 +23,19 @@ public class Medication {
     }
 
     public HashMap<String, String> getMedicines() {
-        return medicines;
+        return drug_prescriptions;
     }
 
     public void setMedicines(HashMap<String, String> medicines) {
-        this.medicines = medicines;
+        this.drug_prescriptions = medicines;
     }
 
-    public HashMap<String, String> getNotes() {
-        return notes;
+    public HashMap<String, String> getLab_tests() {
+        return lab_tests;
     }
 
-    public void setNotes(HashMap<String, String> notes) {
-        this.notes = notes;
+    public void setLab_tests(HashMap<String, String> lab_tests) {
+        this.lab_tests = lab_tests;
     }
 
 }

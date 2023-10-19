@@ -1,6 +1,7 @@
 [
   {
     "ward": "1A",
+    "passwordUtils": {},
     "id": 1,
     "username": "Smith",
     "password": "e95f770ac4fb91ac2e4873e4b2dfc0e6",
@@ -9,6 +10,7 @@
   },
   {
     "ward": "3B",
+    "passwordUtils": {},
     "id": 2,
     "username": "Silva",
     "password": "593bfa141e57e67c1f1be324f0195e64",
@@ -17,6 +19,7 @@
   },
   {
     "ward": "2A",
+    "passwordUtils": {},
     "id": 3,
     "username": "Johnson",
     "password": "3228635b89112e2c641f5e5cc44e19fe",

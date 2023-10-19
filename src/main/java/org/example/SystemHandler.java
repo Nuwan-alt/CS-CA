@@ -53,7 +53,7 @@ public class SystemHandler {
                             .orElse(null);
 
                     assert staff != null;
-                    staff.runStaff(doctors,scanner);
+                    staff.runStaff(doctors,patients,staffs,scanner,fileUtils);
                 }
                 case "patient" -> {
                     Patient patient = patients.stream()
@@ -62,7 +62,7 @@ public class SystemHandler {
                             .orElse(null);
 
                     assert patient != null;
-                    patient.runPatients(doctors,scanner);
+                    patient.runPatients(doctors,patients,scanner,fileUtils);
                 }case "admin" -> {
                     admin.runAdmin(doctors,patients,staffs,scanner,fileUtils);
                 }

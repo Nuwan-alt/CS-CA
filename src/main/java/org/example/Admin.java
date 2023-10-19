@@ -24,7 +24,8 @@ public class Admin extends User{
             System.out.println("7 : Remove staff member");
             System.out.println("8 : Add patient");
             System.out.println("9 : Remove patient");
-            System.out.println("10 : Logout");
+            System.out.println("10 : change password");
+            System.out.println("11 : Logout");
             System.out.println("===========================================================");
             String doctorUsername = scanner.nextLine();
 
@@ -50,6 +51,12 @@ public class Admin extends User{
                 }case "9" -> {
                     removePatient(patients, scanner, fileUtils);
                 }case "10" -> {
+                    chanePassword(scanner, fileUtils);
+                    System.out.println("Password changed successfully");
+                    System.out.println("Please login again");
+                    return;
+                }
+                case "11" -> {
                     fileUtils.printLogOut();
                     return;
                 }
@@ -207,6 +214,20 @@ public class Admin extends User{
             if(fileUtils.managePatient(patients)){
                 System.out.println("***************** Patient removed successfully *****************");
             }
+        }
+    }
+
+    private void chanePassword(Scanner scanner, FileUtils fileUtils) {
+        System.out.println("Enter your current password: ");
+        String currentPassword = scanner.nextLine();
+
+        if(passwordUtils.checkPasswordMD5(currentPassword, this.getPassword())) {
+            System.out.println("Enter your new password: ");
+            String newPassword = scanner.nextLine();
+            this.setPassword(passwordUtils.createPassword(newPassword));
+            fileUtils.updateAdmin(this);
+        }else {
+            System.out.println("Incorrect password");
         }
     }
 }
