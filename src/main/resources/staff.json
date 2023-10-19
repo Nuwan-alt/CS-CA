@@ -1,23 +1,23 @@
 [
-    {
-        "id": 7,
-        "username": "James",
-        "password": "d52e32f3a96a64786814ae9b5279fbe5",
-        "role": "staff",
-        "age": 25
-    },
-    {
-        "id": 8,
-        "username": "Sam",
-        "role": "staff",
-        "password": "ba0e0cde1bf72c28d435c89a66afc61a",
-        "age": 32
-    },
-    {
-        "id": 9,
-        "username": "Chris",
-        "role": "staff",
-        "password": "944facfeb153b4f01916a0f166fcc315",
-        "age": 38
-    }
+  {
+    "id": 1,
+    "username": "James",
+    "password": "d52e32f3a96a64786814ae9b5279fbe5",
+    "role": "staff",
+    "age": 25
+  },
+  {
+    "id": 2,
+    "username": "Sam",
+    "password": "ba0e0cde1bf72c28d435c89a66afc61a",
+    "role": "staff",
+    "age": 32
+  },
+  {
+    "id": 3,
+    "username": "Chris",
+    "password": "944facfeb153b4f01916a0f166fcc315",
+    "role": "staff",
+    "age": 38
+  }
 ]

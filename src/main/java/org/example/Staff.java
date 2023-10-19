@@ -5,12 +5,18 @@ import java.util.Scanner;
 
 public class Staff extends User{
 
+    public Staff(int i, String username,String role, Integer age) {
+        super(i, username, role, age);
+    }
+
     public void runStaff(List<Doctor> doctors, Scanner scanner) {
 
         while (true){
             System.out.println("==================== Enter your choice ====================");
             System.out.println("1 : view all doctors");
             System.out.println("2 : Logout");
+            System.out.println("===========================================================");
+
             String doctorUsername = scanner.nextLine();
 
             switch (doctorUsername) {
@@ -25,17 +31,6 @@ public class Staff extends User{
             }
         }
 
-
-
     }
 
-    private void viewAllDoctors(List<Doctor> doctors){
-        System.out.println("Name       : Ward");
-        for (Doctor doctor : doctors) {
-            String username = doctor.getUsername();
-            String ward = doctor.getWard();
-            String formattedOutput = String.format("%-20s : %s", username, ward);
-            System.out.println(formattedOutput);
-        }
-    }
 }

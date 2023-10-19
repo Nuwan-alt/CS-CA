@@ -7,7 +7,13 @@ import java.util.List;
 public class Medication {
     private String decease;
     private HashMap<String,String> medicines;
-    private HashMap<Date,String> notes;
+    private HashMap<String,String> notes;
+
+    public Medication(String decease) {
+        this.decease = decease;
+        this.medicines = new HashMap<>();
+        this.notes = new HashMap<>();
+    }
 
     public String getDecease() {
         return decease;
@@ -25,11 +31,11 @@ public class Medication {
         this.medicines = medicines;
     }
 
-    public HashMap<Date, String> getNotes() {
+    public HashMap<String, String> getNotes() {
         return notes;
     }
 
-    public void setNotes(HashMap<Date, String> notes) {
+    public void setNotes(HashMap<String, String> notes) {
         this.notes = notes;
     }
 
